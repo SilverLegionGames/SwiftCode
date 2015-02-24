@@ -1,0 +1,33 @@
+This code snippet allows random number generation in swift.
+I will put comments in "*" so you dont get confused.
+
+*Code:*
+arc4random_uniform(1...1000)
+
+*Now lets break this down.*
+
+arc4random
+
+*This generates a random, unsigned 32 bit number.*
+*Just, think of it as, unsigned = number is temporary, and 32 bit = max number is 2147483647.*
+*However this is not it, all you need.*
+
+_uniform
+
+*This makes the numbers a bit more randomised and reliable/realistic, so you get a random number,*
+*but the numbers are more reliable*
+
+(1...1000)
+
+*This part is where you include the range, minimum being 1 , and maximum being 2147483647 (since its 32 bit), must use THREE periods to show it's a range*
+
+*Once all this code is complete everytime you run this function it will return an unsigned integer within your range *
+*to you, however next you must make it signed simpley by assigning to a variable, and then making the variable an integer*
+
+*Finalized code to get a random number*
+
+var unsignedRandomNumber = arc4random_uniform(1...1000)
+var randomNumber = Int(unsignedRandomNumber)
+
+*You must then turn the unsignedRandomNumber from the arc4random_uniform code into an integer to use it, simply by putting Int(variableName assigned to the function)*
+
